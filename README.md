@@ -1,8 +1,5 @@
 # Work Day Scheduler
 
-
-  # Work Day Scheduler
-
 **Work Day Scheduler** is for the USER with a busy schedule; allowing the USER the ability to manage thier time more effectively.
 * The USER can add inportant events to the daily planner
 * The current day is displayed at the top of the schedule
