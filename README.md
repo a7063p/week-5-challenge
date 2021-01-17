@@ -1,6 +1,6 @@
 # Work Day Scheduler
 
-![Work Day Scheduler](week-5-challenge/assets/images/work_day_scheduler.PNG)
+![Work Day Scheduler](/assets/images/work_day_scheduler.PNG)
 
 
 
