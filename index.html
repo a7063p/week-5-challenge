@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -38,10 +40,10 @@
               <p>9AM</p>                        
           </div>
           <div class="col-10 d-flex text-col" >
-              <textarea class="form-control text-box" id="text-9"></textarea>                       
+              <textarea class="form-control text-box" id="am9"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default save-btn"  type="input" id="btn-9">B</button>                       
+              <button class="btn btn-default save-btn"  type="input" id="btn-9" ><span class="oi oi-book"></span></button>                       
           </div>
         </div>
 
@@ -52,88 +54,88 @@
               <p>10AM</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box"id="text-10"></textarea>                       
+              <textarea class="form-control text-box"id="am10"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default save-btn"  type="input" id="btn-10">B</button>                       
+              <button class="btn btn-default save-btn"  type="input" id="btn-10"><span class="oi oi-book"></span></button>                       
           </div>
         </div>
 
         <!--11AM-->
-        <div class="row flex-row">
+        <div class="row flex-row" id="data-11">
           <div class="col-1 d-flex time-col">
               <p>11AM</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box" id="text-11" text-data=""></textarea>                       
+              <textarea class="form-control text-box" id="am11"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default"  type="button" id="btn-11">B</button>                       
+              <button class="btn btn-default"  type="button" id="btn-11"><span class="oi oi-book"></span></button>                       
           </div>
         </div>
 
-        <!--  -->
+        <!--12pm-->
         <div class="row flex-row">
           <div class="col-1 d-flex time-col">
               <p>12pm</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box"></textarea>                       
+              <textarea class="form-control text-box" id="pm12"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default"  type="button">B</button>                       
+              <button class="btn btn-default"  type="button" id="btn-12"><span class="oi oi-book"></span></button>                       
           </div>
         </div>
 
-        <!--  -->
+        <!--1pm-->
         <div class="row flex-row">
           <div class="col-1 d-flex time-col">
               <p>1PM</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box"></textarea>                       
+              <textarea class="form-control text-box" id="pm1"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default"  type="button">B</button>                       
+              <button class="btn btn-default"  type="button" id="btn-13"><span class="oi oi-book"></span></button>                       
           </div>
 
-          <!--  -->
+          <!--2pm -->
         </div>
         <div class="row flex-row">
           <div class="col-1 d-flex time-col">
               <p>2PM</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box"></textarea>                       
+              <textarea class="form-control text-box" id="pm2"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default"  type="button">B</button>                       
+              <button class="btn btn-default"  type="button" id="btn-14"><span class="oi oi-book"></span></button>                       
           </div>
         </div>
 
-        <!--  -->
+        <!--3pm-->
         <div class="row flex-row">
           <div class="col-1 d-flex time-col">
               <p>3PM</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box"></textarea>                       
+              <textarea class="form-control text-box" id="pm3"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default"  type="button">B</button>                       
+              <button class="btn btn-default"  type="button" id="btn-15"><span class="oi oi-book"></span></button>                       
           </div>
         </div>
 
-        <!--  -->
+        <!--4pm-->
         <div class="row flex-row">
           <div class="col-1 d-flex time-col">
               <p>4PM</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box"></textarea>                       
+              <textarea class="form-control text-box" id="pm4"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default"  type="button">B</button>                       
+              <button class="btn btn-default"  type="button" id="btn-16"><span class="oi oi-book"></span></button>                       
           </div>
         </div>
 
@@ -143,15 +145,14 @@
               <p>5PM</p>                        
           </div>
           <div class="col-10 d-flex text-col">
-              <textarea class="form-control text-box"></textarea>                       
+              <textarea class="form-control text-box" id="pm5"></textarea>                       
           </div>
           <div class="col-1 text-center btn-col">
-              <button class="btn btn-default"  type="button">B</button>                       
+              <button class="btn btn-default"  type="button" id="btn-17"><span class="oi oi-book"></span></button>                       
           </div>
         </div>
        </div>              
-   
-
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/index.js"></script>

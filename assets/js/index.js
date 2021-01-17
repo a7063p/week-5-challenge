@@ -1,66 +1,131 @@
 
-var tasks =  [];
+var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+$("#currentDay").append(currentTime);
 
 
-// JSON.parse(localStorage.getItem("scheduleList")) ||
 
-//---------------BTN HANDLER---------------//
+
+//---------------BTN HANDLER(s)---------------//
+
+
   // ----9AM---------//
  
  $('#btn-9').on('click', function(){
-  var taskVal = $('#text-9')
+  
+  var textId =$('#am9').attr('id')
+  var taskVal = $('#am9') 
   .val()
-  .trim();
-  console.log(taskVal);
-  setId(taskVal)  
-
- })
+  .trim();  
+  saveTasks(taskVal, textId) 
+});
  // ----10am----------//
 
  $('#btn-10').on('click', function(){
-  var taskVal = $('#text-10')
+  
+  var textId =$('#am10').attr('id') 
+  var taskVal = $('#am10')  
   .val()
-  .trim();
-  console.log(taskVal);
-  setId(taskVal)
- })
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
  // ----11am----------//
 
- $('#btn-11').on('click', function(){  
-  var taskVal = $('#text-11')
+ $('#btn-11').on('click', function(){
+  
+  var textId =$('#am11').attr('id') 
+  var taskVal = $('#am11')  
   .val()
-  .trim();
-   setId(taskVal)
-     
- })
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
+ // ----12pm----------//
 
+ $('#btn-12').on('click', function(){
+  
+  var textId =$('#pm12').attr('id') 
+  var taskVal = $('#pm12')  
+  .val()
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
+ // ----1pm----------//
 
+ $('#btn-13').on('click', function(){
+  
+  var textId =$('#pm1').attr('id') 
+  var taskVal = $('#pm1')  
+  .val()
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
+ // ----2pm----------//
 
-var setId = function(taskVal) {
-  tasks.push(taskVal);
+ $('#btn-14').on('click', function(){
+  
+  var textId =$('#pm2').attr('id') 
+  var taskVal = $('#pm2')  
+  .val()
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
+// ----3pm----------//
 
-    for ( var i = 0; i< tasks.length; i++){
-      $('.save-btn').attr('btn-data',i)
-      $('.text-box').attr('text-data',i)
-      } 
-}
+ $('#btn-15').on('click', function(){
+  
+  var textId =$('#pm3').attr('id') 
+  var taskVal = $('#pm3')  
+  .val()
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
+ // ----4pm----------//
 
-// var resetId = function(taskVal) {
-//   var delTaskIndex = parseInt($('.text-box').attr('text-data'))
+ $('#btn-16').on('click', function(){
+  
+  var textId =$('#pm4').attr('id') 
+  var taskVal = $('#pm4')  
+  .val()
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
+ // ----5pm----------//
 
-//   if(delTaskIndex === NaN) {
-//     setId(taskVal)
-//     console.log(delTaskIndex);
-//   } else {
-//     tasks.splice(delTaskIndex,1)
-//     setId(taskVal)
-//     console.log(tasks);
-//   }
+ $('#btn-17').on('click', function(){
+  
+  var textId =$('#pm5').attr('id') 
+  var taskVal = $('#pm5')  
+  .val()
+  .trim();  
+  saveTasks(taskVal, textId)   
+ });
  
-// }
+
+//  ----------set storage-----------------//
 
 
-      
+
+ var saveTasks = function(taskVal, textId) {
+  console.log(textId);
+
+  localStorage.setItem(textId, taskVal);
+ };
+
+
+
+ var loadTasks = function(taskVal, TextId) {
+  $('#am9').val(localStorage.getItem('am9'))
+  $('#am10').val(localStorage.getItem('am10'))
+  $('#am11').val(localStorage.getItem('am11'))
+  $('#pm12').val(localStorage.getItem('pm12'))
+  $('#pm1').val(localStorage.getItem('pm1'))
+  $('#pm2').val(localStorage.getItem('pm2'))
+  $('#pm3').val(localStorage.getItem('pm3'))
+  $('#pm4').val(localStorage.getItem('pm4'))
+  $('#pm5').val(localStorage.getItem('apm5'))
+ }
+
+
+ loadTasks()
 
 
 
