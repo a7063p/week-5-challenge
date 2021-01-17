@@ -142,9 +142,9 @@ $("#currentDay").append(currentTime);
  
  setInterval(function(){
    location.reload()
- },3600000- currentMinutes)
+ },3600000- currentMinutes);
  
- checkTime()
+
 
 
  var loadTasks = function(taskVal, TextId) {
@@ -157,9 +157,9 @@ $("#currentDay").append(currentTime);
   $('#h15').val(localStorage.getItem('h15'))
   $('#h16').val(localStorage.getItem('h16'))
   $('#h17').val(localStorage.getItem('h17'))
- }
+ };
 
- loadTasks()
-
+ loadTasks();
+ checkTime();
 
 
