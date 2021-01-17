@@ -102,9 +102,7 @@ $("#currentDay").append(currentTime);
 
 //  ----------set storage-----------------//
  var saveTasks = function(taskVal, textId) {
-  console.log(textId);
-
-  localStorage.setItem(textId, taskVal);
+    localStorage.setItem(textId, taskVal);
  };
 
 
@@ -112,9 +110,6 @@ $("#currentDay").append(currentTime);
 
  var currentTime = moment().hour(); 
  var currentMinutes = moment().minutes() * 60000;
- console.log(currentTime);
- console.log(currentMinutes);
-
  
  
  var checkTime = function () { 
