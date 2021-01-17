@@ -1,5 +1,6 @@
 # Work Day Scheduler
 
+![Work Day Scheduler](challenges\week-5\assets\images\work_day_scheduler.PNG)
 
 
 
