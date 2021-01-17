@@ -1,5 +1,9 @@
 # Work Day Scheduler
 
+**Work Day Scheduler** is for the USER with a busy schedule; allowing the USER to manage thier time more effectively.
+* The USER can add inportant events to the daily planner
+*
+
 ![Work Day Scheduler](/assets/images/work_day_scheduler.PNG)
 
 
