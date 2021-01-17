@@ -1,8 +1,8 @@
 
-var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+// ---Scheduler Date
+
+var currentTime = moment().format('MMMM Do YYYY');
 $("#currentDay").append(currentTime);
-
-
 
 
 //---------------BTN HANDLER(s)---------------//
@@ -12,8 +12,8 @@ $("#currentDay").append(currentTime);
  
  $('#btn-9').on('click', function(){
   
-  var textId =$('#am9').attr('id')
-  var taskVal = $('#am9') 
+  var textId =$('#h9').attr('id')
+  var taskVal = $('#h9') 
   .val()
   .trim();  
   saveTasks(taskVal, textId) 
@@ -22,8 +22,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-10').on('click', function(){
   
-  var textId =$('#am10').attr('id') 
-  var taskVal = $('#am10')  
+  var textId =$('#h10').attr('id') 
+  var taskVal = $('#h10')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -32,8 +32,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-11').on('click', function(){
   
-  var textId =$('#am11').attr('id') 
-  var taskVal = $('#am11')  
+  var textId =$('#h11').attr('id') 
+  var taskVal = $('#h11')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -42,8 +42,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-12').on('click', function(){
   
-  var textId =$('#pm12').attr('id') 
-  var taskVal = $('#pm12')  
+  var textId =$('#h12').attr('id') 
+  var taskVal = $('#h12')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -52,8 +52,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-13').on('click', function(){
   
-  var textId =$('#pm1').attr('id') 
-  var taskVal = $('#pm1')  
+  var textId =$('#h13').attr('id') 
+  var taskVal = $('#h13')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -62,8 +62,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-14').on('click', function(){
   
-  var textId =$('#pm2').attr('id') 
-  var taskVal = $('#pm2')  
+  var textId =$('#h14').attr('id') 
+  var taskVal = $('#h14')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -72,8 +72,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-15').on('click', function(){
   
-  var textId =$('#pm3').attr('id') 
-  var taskVal = $('#pm3')  
+  var textId =$('#h15').attr('id') 
+  var taskVal = $('#h15')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -82,8 +82,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-16').on('click', function(){
   
-  var textId =$('#pm4').attr('id') 
-  var taskVal = $('#pm4')  
+  var textId =$('#h16').attr('id') 
+  var taskVal = $('#h16')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -92,8 +92,8 @@ $("#currentDay").append(currentTime);
 
  $('#btn-17').on('click', function(){
   
-  var textId =$('#pm5').attr('id') 
-  var taskVal = $('#pm5')  
+  var textId =$('#h17').attr('id') 
+  var taskVal = $('#h17')  
   .val()
   .trim();  
   saveTasks(taskVal, textId)   
@@ -101,9 +101,6 @@ $("#currentDay").append(currentTime);
  
 
 //  ----------set storage-----------------//
-
-
-
  var saveTasks = function(taskVal, textId) {
   console.log(textId);
 
@@ -111,19 +108,56 @@ $("#currentDay").append(currentTime);
  };
 
 
+//  ---time handlers---//
+
+ var currentTime = moment().hour(); 
+ var currentMinutes = moment().minutes() * 60000;
+ console.log(currentTime);
+ console.log(currentMinutes);
+
+ 
+ 
+ var checkTime = function () { 
+
+  $('.text-box').each(function () {
+    var scheduledTime= parseInt($(this).attr('id').split('h')[1])
+    
+    if (scheduledTime < currentTime) {
+      $(this).removeClass("upcoming-time");
+      $(this).removeClass("current-time");
+      $(this).addClass("past-time")
+    }
+    else if (scheduledTime === currentTime) {
+      $(this).removeClass("upcoming-time");
+      $(this).removeClass("past-time");
+      $(this).addClass("current-time")
+    }
+    else {
+      $(this).removeClass("current-time");
+      $(this).removeClass("past-time");
+      $(this).addClass("upcoming-time")
+    }
+  })   
+ }
+ 
+ setInterval(function(){
+   location.reload()
+ },3600000- currentMinutes)
+ 
+ checkTime()
+
 
  var loadTasks = function(taskVal, TextId) {
-  $('#am9').val(localStorage.getItem('am9'))
-  $('#am10').val(localStorage.getItem('am10'))
-  $('#am11').val(localStorage.getItem('am11'))
-  $('#pm12').val(localStorage.getItem('pm12'))
-  $('#pm1').val(localStorage.getItem('pm1'))
-  $('#pm2').val(localStorage.getItem('pm2'))
-  $('#pm3').val(localStorage.getItem('pm3'))
-  $('#pm4').val(localStorage.getItem('pm4'))
-  $('#pm5').val(localStorage.getItem('apm5'))
+  $('#h9').val(localStorage.getItem('h9'))
+  $('#h10').val(localStorage.getItem('h10'))
+  $('#h11').val(localStorage.getItem('h11'))
+  $('#h12').val(localStorage.getItem('h12'))
+  $('#h13').val(localStorage.getItem('h13'))
+  $('#h14').val(localStorage.getItem('h14'))
+  $('#h15').val(localStorage.getItem('h15'))
+  $('#h16').val(localStorage.getItem('h16'))
+  $('#h17').val(localStorage.getItem('h17'))
  }
-
 
  loadTasks()
 

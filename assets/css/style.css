@@ -63,17 +63,37 @@ body {
 
   .text-box {
       border: none;
+      border-radius: 0;
   }
   .btn-col{
-      background-color: rgb(0, 225, 255);
+      background-color: #18b1cb;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
       
-      border-right: 1px solid rgb(0, 204, 255);
-      border-left: 2px solid rgb(0, 204, 255);
+      border-right: 1px solid #18b1cb;
+      border-left: 2px solid #18b1cb
+      ;
+  }
+  .oi-book {
+    color: white;
+  }
 
+  /* ---time schedule alerts */
+
+  .past-time,
+  .past-time:focus {
+    background-color: #cbcbcb;
+  }
+  .current-time,
+  .current-time:focus{
+    background-color: #ea4e56;
+  }
+
+  .upcoming-time,
+  .upcoming-time:focus{
+    background-color:#70e26f;
   }
 
   
