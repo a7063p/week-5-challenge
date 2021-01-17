@@ -1,6 +1,8 @@
- *:focus {
-    outline: none; 
-} 
+*:focus {
+  border: none;
+  outline:none;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -17,6 +19,7 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    
   }
   
   .jumbotron {
@@ -70,19 +73,25 @@ body {
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       border-top: 1px solid gray;
-      border-bottom: 1px solid gray;
-      
+      border-bottom: 1px solid gray;      
       border-right: 1px solid #18b1cb;
-      border-left: 2px solid #18b1cb
-      ;
+      border-left: 2px solid #18b1cb;
+      
   }
   .oi {
     color: white;
   }
   .oi:active {
-    color: black; 
+    color: black;     
   }
 
+  .save-btn:focus
+   {
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
    /* ---time schedule alerts */
 
   .past-time,
