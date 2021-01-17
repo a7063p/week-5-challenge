@@ -1,6 +1,6 @@
-*:focus {
-    outline: none;
-}
+ *:focus {
+    outline: none; 
+} 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -76,11 +76,14 @@ body {
       border-left: 2px solid #18b1cb
       ;
   }
-  .oi-book {
+  .oi {
     color: white;
   }
+  .oi:active {
+    color: black; 
+  }
 
-  /* ---time schedule alerts */
+   /* ---time schedule alerts */
 
   .past-time,
   .past-time:focus {
